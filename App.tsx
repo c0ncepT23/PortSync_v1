@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './src/store';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import theme from './src/styles/theme';
+import { ThemeProvider } from './src/contexts/ThemeContext';
 import RootNavigator from './src/navigation/RootNavigator';
 import 'react-native-gesture-handler';
 
@@ -15,13 +15,13 @@ export default function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <SafeAreaProvider>
-          <NavigationContainer>
-            <NativeBaseProvider theme={theme}>
+        <ThemeProvider>
+          <SafeAreaProvider>
+            <NavigationContainer>
               <RootNavigator />
-            </NativeBaseProvider>
-          </NavigationContainer>
-        </SafeAreaProvider>
+            </NavigationContainer>
+          </SafeAreaProvider>
+        </ThemeProvider>
       </PersistGate>
     </Provider>
   );

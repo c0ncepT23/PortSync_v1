@@ -5,7 +5,7 @@ import { Box, Button, Center, Heading, Text, VStack, HStack, Divider, Icon, Prog
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Feather } from '@expo/vector-icons';
 import { useSelector } from 'react-redux';
-import { RootState } from '../store';
+import { RootState } from '../../store';
 
 // Mock data for portfolio holdings
 const mockHoldings = [

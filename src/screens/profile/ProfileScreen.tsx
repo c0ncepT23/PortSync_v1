@@ -4,8 +4,9 @@ import React from 'react';
 import { Box, Button, Center, Heading, Text, VStack, Avatar, HStack, Divider } from 'native-base';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDispatch, useSelector } from 'react-redux';
-import { clearCredentials } from '../store/slices/authSlice';
-import { RootState } from '../store';
+import { clearCredentials } from '../../store/slices/authSlice';
+
+import { RootState } from '../../store';
 
 const ProfileScreen = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ const ProfileScreen = () => {
           <Heading color="light.100" size="xl">Profile</Heading>
           
           <Box bg="dark.500" rounded="xl" p={5}>
-            <VStack space={4} alignItems="center">
+            <VStack space={4} alignItems="center">,
               <Avatar 
                 bg="primary.500" 
                 size="xl"

@@ -3,32 +3,29 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons';
-import { useTheme, Icon } from 'native-base';
+import { Icon, Text, Box } from 'native-base';
 
 // Import screens
-import HomeScreen from '../screens/HomeScreen';
-import PortfolioScreen from '../screens/PortfolioScreen';
-import RankingsScreen from '../screens/RankingsScreen';
-import ProfileScreen from '../screens/ProfileScreen';
+import HomeScreen from '../screens/home/HomeScreen';
+import PortfolioScreen from '../screens/portfolio/PortfolioScreen';
+import RankingsScreen from '../screens/rankings/RankingsScreen';
+import ProfileScreen from '../screens/profile/ProfileScreen';
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => {
-  const { colors } = useTheme();
-
   return (
     <Tab.Navigator
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: colors.dark[900],
+          backgroundColor: '#000000',
           borderTopWidth: 0,
           elevation: 0,
-          paddingTop: 5,
           height: 60,
         },
-        tabBarActiveTintColor: colors.primary[500],
-        tabBarInactiveTintColor: colors.light[300],
+        tabBarActiveTintColor: '#00E5CC',
+        tabBarInactiveTintColor: '#cccccc',
       }}
     >
       <Tab.Screen
